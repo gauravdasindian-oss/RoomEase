@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Management | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html" class="active">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Expense Management</h2>
+                <p>Track shared expenses and manage household spending.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Expense Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Expenses</h3>
+                <p id="total-expenses">₹0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Transactions</h3>
+                <p id="total-transactions">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Expense</h3>
+                <p id="average-expense">₹0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Expense Form -->
+        <section class="roommate-form-section">
+
+            <h3>Add a New Expense</h3>
+
+            <form id="expense-form">
+
+                <div class="form-group">
+                    <label for="expense-title">Expense Name</label>
+
+                    <input
+                        type="text"
+                        id="expense-title"
+                        name="expenseTitle"
+                        placeholder="Example: Electricity Bill"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="expense-category">Expense Category</label>
+
+                    <select id="expense-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Water">Water</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="expense-amount">Amount (₹)</label>
+
+                    <input
+                        type="number"
+                        id="expense-amount"
+                        name="amount"
+                        placeholder="Enter amount"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="expense-paid-by">Paid By</label>
+
+                    <select id="expense-paid-by" name="paidBy" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="expense-date">Expense Date</label>
+
+                    <input
+                        type="date"
+                        id="expense-date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="expense-notes">Additional Notes</label>
+
+                    <textarea
+                        id="expense-notes"
+                        name="notes"
+                        placeholder="Add any additional information..."
+                        rows="3"
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add Expense
+                </button>
+
+            </form>
+
+            <p id="expense-message"></p>
+
+        </section>
+
+
+        <!-- Expense History -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Expense History</h3>
+            </div>
+
+            <div class="roommate-grid" id="expense-list">
+
+                <p class="empty-message">
+                    No expenses have been recorded yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Expense Summary -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Roommate Expense Summary</h3>
+            </div>
+
+            <div id="expense-summary">
+
+                <p class="empty-message">
+                    Expense summaries will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+node_modules/
+roomease.db
+roomease.db-shm
+roomease.db-wal
+.env

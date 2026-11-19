@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RoomEase | Home</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            Room<span>Ease</span>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Homepage Content -->
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <div>
+                <h1>Welcome to RoomEase!</h1>
+
+                <p>
+                    Manage your shared living space,
+                    responsibilities and expenses
+                    in one place.
+                </p>
+            </div>
+
+            <div class="welcome-icon">
+                🏠
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Statistics -->
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+                <h3>Total Roommates</h3>
+                <p id="total-roommates">0</p>
+                <span>People living together</span>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Pending Chores</h3>
+                <p id="pending-chores">0</p>
+                <span>Tasks waiting to be completed</span>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Completed Chores</h3>
+                <p id="completed-chores">0</p>
+                <span>Tasks completed</span>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Shopping Items</h3>
+                <p id="shopping-items">0</p>
+                <span>Items remaining to purchase</span>
+            </div>
+
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="features-section">
+
+            <h2>Manage Your Household</h2>
+
+            <p class="section-description">
+                Select a feature to manage your shared accommodation.
+            </p>
+
+
+            <div class="features-grid">
+
+                <!-- Roommates -->
+                <a href="roommates.html" class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Roommate Management</h3>
+                    <p>
+                        Add, view and manage all
+                        the roommates living together.
+                    </p>
+                </a>
+
+
+                <!-- Chores -->
+                <a href="chores.html" class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>Chore Management</h3>
+                    <p>
+                        Assign household tasks
+                        automatically and track progress.
+                    </p>
+                </a>
+
+
+                <!-- Expenses -->
+                <a href="expenses.html" class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Expense Management</h3>
+                    <p>
+                        Record shared expenses
+                        and manage household spending.
+                    </p>
+                </a>
+
+
+                <!-- Groceries -->
+                <a href="groceries.html" class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Grocery Management</h3>
+                    <p>
+                        Create and maintain
+                        a shared grocery shopping list.
+                    </p>
+                </a>
+
+
+                <!-- Inventory -->
+                <a href="inventory.html" class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Inventory Management</h3>
+                    <p>
+                        Track food items and
+                        essential household supplies.
+                    </p>
+                </a>
+
+
+                <!-- Bookings -->
+                <a href="bookings.html" class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Resource Booking</h3>
+                    <p>
+                        Manage reservations
+                        for shared household resources.
+                    </p>
+                </a>
+
+
+                <!-- Notifications -->
+                <a href="notifications.html" class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Notifications</h3>
+                    <p>
+                        View pending tasks,
+                        reminders and household updates.
+                    </p>
+                </a>
+
+
+                <!-- House Rules -->
+                <a href="rules.html" class="feature-card">
+                    <div class="feature-icon">📌</div>
+                    <h3>House Rules</h3>
+                    <p>
+                        Maintain common rules
+                        and agreements among roommates.
+                    </p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Activity -->
+        <section class="activity-section">
+
+            <h2>Recent Activity</h2>
+
+            <div id="recent-activity">
+
+                <p>
+                    No recent activities yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 RoomEase.
+            Shared Living, Made Easier.
+        </p>
+
+    </footer>
+
+</body>
+</html>

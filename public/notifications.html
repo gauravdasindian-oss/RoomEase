@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html" class="active">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Notifications & Reminders</h2>
+                <p>Stay updated with everything happening in your shared home.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Notification Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Notifications</h3>
+                <p id="total-notifications">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Unread Notifications</h3>
+                <p id="unread-notifications">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Read Notifications</h3>
+                <p id="read-notifications">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Notification Controls -->
+        <section class="roommate-form-section">
+
+            <div class="section-header">
+                <h3>Notification Centre</h3>
+
+                <button
+                    type="button"
+                    id="mark-all-read"
+                    class="add-button"
+                >
+                    Mark All as Read
+                </button>
+            </div>
+
+
+            <!-- Notification Filters -->
+            <div class="form-group">
+
+                <label for="notification-filter">
+                    Filter Notifications
+                </label>
+
+                <select id="notification-filter">
+                    <option value="all">All Notifications</option>
+                    <option value="unread">Unread Only</option>
+                    <option value="read">Read Only</option>
+                    <option value="chores">Chore Reminders</option>
+                    <option value="expenses">Expense Updates</option>
+                    <option value="groceries">Grocery Updates</option>
+                    <option value="bookings">Booking Updates</option>
+                    <option value="general">General Updates</option>
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- Notification List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Recent Notifications</h3>
+            </div>
+
+            <div id="notification-list" class="roommate-grid">
+
+                <p class="empty-message">
+                    You don't have any notifications yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Create Announcement -->
+        <section class="roommate-form-section">
+
+            <h3>Create House Announcement</h3>
+
+            <p>
+                Share an important message with all the roommates.
+            </p>
+
+            <form id="announcement-form">
+
+                <div class="form-group">
+                    <label for="announcement-title">
+                        Announcement Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="announcement-title"
+                        name="title"
+                        placeholder="Example: Monthly House Meeting"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="announcement-message">
+                        Announcement Message
+                    </label>
+
+                    <textarea
+                        id="announcement-message"
+                        name="message"
+                        placeholder="Write your announcement here..."
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="announcement-by">
+                        Posted By
+                    </label>
+
+                    <select id="announcement-by" name="postedBy" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Publish Announcement
+                </button>
+
+            </form>
+
+            <p id="announcement-message-status"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

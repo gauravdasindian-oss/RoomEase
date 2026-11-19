@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Rules | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html" class="active">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>House Rules</h2>
+                <p>Create and manage rules to maintain a peaceful shared living environment.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Rules Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Rules</h3>
+                <p id="total-rules">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Rules</h3>
+                <p id="active-rules">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Inactive Rules</h3>
+                <p id="inactive-rules">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add New Rule -->
+        <section class="roommate-form-section">
+
+            <h3>Create a New House Rule</h3>
+
+            <form id="rule-form">
+
+                <div class="form-group">
+                    <label for="rule-title">Rule Title</label>
+
+                    <input
+                        type="text"
+                        id="rule-title"
+                        name="title"
+                        placeholder="Example: Maintain cleanliness"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rule-category">Rule Category</label>
+
+                    <select id="rule-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Cleanliness">Cleanliness</option>
+                        <option value="Noise">Noise and Quiet Hours</option>
+                        <option value="Guests">Guests</option>
+                        <option value="Kitchen">Kitchen Usage</option>
+                        <option value="Expenses">Shared Expenses</option>
+                        <option value="Safety">Household Safety</option>
+                        <option value="General">General</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rule-description">Rule Description</label>
+
+                    <textarea
+                        id="rule-description"
+                        name="description"
+                        placeholder="Describe the house rule..."
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rule-created-by">Created By</label>
+
+                    <select id="rule-created-by" name="createdBy" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add House Rule
+                </button>
+
+            </form>
+
+            <p id="rule-message"></p>
+
+        </section>
+
+
+        <!-- House Rules List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Our Household Rules</h3>
+            </div>
+
+            <div class="roommate-grid" id="rule-list">
+
+                <p class="empty-message">
+                    No house rules have been added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Default House Guidelines -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Suggested Household Guidelines</h3>
+            </div>
+
+            <div class="roommate-grid">
+
+                <div class="roommate-card">
+                    <h4>Cleanliness</h4>
+                    <p>Keep shared spaces clean after using them.</p>
+                </div>
+
+                <div class="roommate-card">
+                    <h4>Noise Control</h4>
+                    <p>Respect everyone's study time and sleeping hours.</p>
+                </div>
+
+                <div class="roommate-card">
+                    <h4>Shared Expenses</h4>
+                    <p>Record shared purchases and settle expenses fairly.</p>
+                </div>
+
+                <div class="roommate-card">
+                    <h4>Kitchen Usage</h4>
+                    <p>Clean utensils and kitchen equipment after use.</p>
+                </div>
+
+                <div class="roommate-card">
+                    <h4>Guests</h4>
+                    <p>Inform other roommates before inviting guests.</p>
+                </div>
+
+                <div class="roommate-card">
+                    <h4>Respect</h4>
+                    <p>Respect everyone's privacy and personal belongings.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

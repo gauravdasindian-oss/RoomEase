@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Management | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html" class="active">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Household Inventory</h2>
+                <p>Keep track of shared belongings and household essentials.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Inventory Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Items</h3>
+                <p id="total-inventory">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Available Items</h3>
+                <p id="available-inventory">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Damaged Items</h3>
+                <p id="damaged-inventory">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Inventory Item Form -->
+        <section class="roommate-form-section">
+
+            <h3>Add Household Item</h3>
+
+            <form id="inventory-form">
+
+                <div class="form-group">
+                    <label for="inventory-name">Item Name</label>
+
+                    <input
+                        type="text"
+                        id="inventory-name"
+                        name="itemName"
+                        placeholder="Example: Refrigerator"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inventory-category">Category</label>
+
+                    <select id="inventory-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Kitchen">Kitchen Equipment</option>
+                        <option value="Appliances">Home Appliances</option>
+                        <option value="Cleaning">Cleaning Equipment</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inventory-quantity">Quantity</label>
+
+                    <input
+                        type="number"
+                        id="inventory-quantity"
+                        name="quantity"
+                        placeholder="Enter quantity"
+                        min="1"
+                        step="1"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inventory-owner">Owned By</label>
+
+                    <select id="inventory-owner" name="owner" required>
+                        <option value="">Select a roommate</option>
+                        <option value="Shared">Shared Household Item</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inventory-condition">Condition</label>
+
+                    <select id="inventory-condition" name="condition" required>
+                        <option value="">Select condition</option>
+                        <option value="Available">Available</option>
+                        <option value="In Use">In Use</option>
+                        <option value="Damaged">Damaged</option>
+                        <option value="Needs Repair">Needs Repair</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inventory-notes">Additional Notes</label>
+
+                    <textarea
+                        id="inventory-notes"
+                        name="notes"
+                        placeholder="Add details about the item..."
+                        rows="3"
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add Item
+                </button>
+
+            </form>
+
+            <p id="inventory-message"></p>
+
+        </section>
+
+
+        <!-- Inventory List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Household Items</h3>
+            </div>
+
+            <div class="roommate-grid" id="inventory-list">
+
+                <p class="empty-message">
+                    No household items have been added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

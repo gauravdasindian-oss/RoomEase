@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore Management | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html" class="active">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div>
+                <h2>Chore Management</h2>
+                <p>Organise household chores and keep your shared space clean.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+        </section>
+
+
+        <!-- Chore Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Chores</h3>
+                <p id="total-chores">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending Chores</h3>
+                <p id="pending-chores">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed Chores</h3>
+                <p id="completed-chores">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Chore Form -->
+        <section class="roommate-form-section">
+
+            <h3>Add a New Chore</h3>
+
+            <form id="chore-form">
+
+                <div class="form-group">
+                    <label for="chore-name">Chore Name</label>
+                    <input
+                        type="text"
+                        id="chore-name"
+                        name="choreName"
+                        placeholder="Example: Clean the kitchen"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="chore-assignee">Assign To</label>
+
+                    <select id="chore-assignee" name="assignee" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="chore-due-date">Due Date</label>
+                    <input
+                        type="date"
+                        id="chore-due-date"
+                        name="dueDate"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="add-button">
+                    + Add Chore
+                </button>
+
+            </form>
+
+            <p id="chore-message"></p>
+
+        </section>
+
+
+        <!-- Chore List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Household Chores</h3>
+            </div>
+
+            <div class="roommate-grid" id="chore-list">
+
+                <p class="empty-message">
+                    No chores have been added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grocery Management | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html" class="active">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Grocery Management</h2>
+                <p>Manage your shared shopping list and never forget essential items.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Grocery Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Items</h3>
+                <p id="total-groceries">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending Items</h3>
+                <p id="pending-groceries">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Purchased Items</h3>
+                <p id="purchased-groceries">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Grocery Form -->
+        <section class="roommate-form-section">
+
+            <h3>Add Grocery Item</h3>
+
+            <form id="grocery-form">
+
+                <div class="form-group">
+                    <label for="grocery-name">Item Name</label>
+
+                    <input
+                        type="text"
+                        id="grocery-name"
+                        name="itemName"
+                        placeholder="Example: Rice"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="grocery-category">Category</label>
+
+                    <select id="grocery-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Dairy">Dairy Products</option>
+                        <option value="Grains">Rice and Grains</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Cleaning">Cleaning Supplies</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="grocery-quantity">Quantity</label>
+
+                    <input
+                        type="number"
+                        id="grocery-quantity"
+                        name="quantity"
+                        placeholder="Enter quantity"
+                        min="1"
+                        step="1"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="grocery-unit">Unit</label>
+
+                    <select id="grocery-unit" name="unit" required>
+                        <option value="">Select a unit</option>
+                        <option value="kg">Kilogram (kg)</option>
+                        <option value="g">Gram (g)</option>
+                        <option value="litre">Litre</option>
+                        <option value="ml">Millilitre (ml)</option>
+                        <option value="packet">Packet</option>
+                        <option value="piece">Piece</option>
+                        <option value="dozen">Dozen</option>
+                        <option value="bottle">Bottle</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="grocery-added-by">Added By</label>
+
+                    <select id="grocery-added-by" name="addedBy" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add to Shopping List
+                </button>
+
+            </form>
+
+            <p id="grocery-message"></p>
+
+        </section>
+
+
+        <!-- Shopping List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Shared Shopping List</h3>
+            </div>
+
+            <div class="roommate-grid" id="grocery-list">
+
+                <p class="empty-message">
+                    Your shopping list is currently empty.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Purchased Items -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Purchased Items</h3>
+            </div>
+
+            <div class="roommate-grid" id="purchased-grocery-list">
+
+                <p class="empty-message">
+                    No items have been purchased yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

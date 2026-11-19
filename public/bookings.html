@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookings Management | RoomEase</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>RoomEase</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="roommates.html">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html" class="active">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Shared Resource Bookings</h2>
+                <p>Reserve shared household facilities and avoid scheduling conflicts.</p>
+            </div>
+
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Booking Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Bookings</h3>
+                <p id="total-bookings">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Upcoming Bookings</h3>
+                <p id="upcoming-bookings">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed Bookings</h3>
+                <p id="completed-bookings">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Booking Form -->
+        <section class="roommate-form-section">
+
+            <h3>Book a Shared Resource</h3>
+
+            <form id="booking-form">
+
+                <div class="form-group">
+                    <label for="booking-resource">Select Resource</label>
+
+                    <select id="booking-resource" name="resource" required>
+                        <option value="">Select a resource</option>
+                        <option value="Washing Machine">Washing Machine</option>
+                        <option value="Study Room">Study Room</option>
+                        <option value="Parking Space">Parking Space</option>
+                        <option value="Common Room">Common Room</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-other-resource">Other Resource Name</label>
+
+                    <input
+                        type="text"
+                        id="booking-other-resource"
+                        name="otherResource"
+                        placeholder="Enter resource name (if Other)"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-roommate">Booked By</label>
+
+                    <select id="booking-roommate" name="roommate" required>
+                        <option value="">Select a roommate</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-date">Booking Date</label>
+
+                    <input
+                        type="date"
+                        id="booking-date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-start">Start Time</label>
+
+                    <input
+                        type="time"
+                        id="booking-start"
+                        name="startTime"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-end">End Time</label>
+
+                    <input
+                        type="time"
+                        id="booking-end"
+                        name="endTime"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="booking-notes">Additional Notes</label>
+
+                    <textarea
+                        id="booking-notes"
+                        name="notes"
+                        placeholder="Add any additional information..."
+                        rows="3"
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Confirm Booking
+                </button>
+
+            </form>
+
+            <p id="booking-message"></p>
+
+        </section>
+
+
+        <!-- Booking History -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>All Bookings</h3>
+            </div>
+
+            <div class="roommate-grid" id="booking-list">
+
+                <p class="empty-message">
+                    No bookings have been made yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Booking Information -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+                <h3>Booking Guidelines</h3>
+            </div>
+
+            <ul class="booking-guidelines">
+
+                <li>Book a resource before using it.</li>
+
+                <li>Check existing bookings to avoid overlapping reservations.</li>
+
+                <li>Respect the selected booking time.</li>
+
+                <li>Cancel your booking if you no longer need the resource.</li>
+
+                <li>Keep shared resources clean after use.</li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 RoomEase. Making shared living easier.</p>
+    </footer>
+
+</body>
+
+</html>

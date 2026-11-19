@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roommates | RoomEase</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript -->
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            Room<span>Ease</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roommates.html" class="active">Roommates</a>
+            <a href="chores.html">Chores</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="groceries.html">Groceries</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="rules.html">House Rules</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h1>Roommate Management</h1>
+
+                <p>
+                    Manage the people living
+                    in your shared accommodation.
+                </p>
+            </div>
+
+            <!-- Return to Homepage -->
+            <a href="index.html" class="home-button">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Add Roommate Section -->
+        <section class="roommate-form-section">
+
+            <h2>Add a New Roommate</h2>
+
+            <p>
+                Enter the details of the person
+                you want to add to RoomEase.
+            </p>
+
+            <form id="roommate-form">
+
+                <div class="form-group">
+
+                    <label for="roommate-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="roommate-name"
+                        name="name"
+                        placeholder="Enter roommate's name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="roommate-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="roommate-email"
+                        name="email"
+                        placeholder="Enter email address"
+                    >
+
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add Roommate
+                </button>
+
+            </form>
+
+            <p id="form-message"></p>
+
+        </section>
+
+
+        <!-- Roommate List -->
+        <section class="roommate-list-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Registered Roommates</h2>
+
+                    <p>
+                        List of everyone currently
+                        registered in your household.
+                    </p>
+                </div>
+
+                <span id="roommate-count">
+                    0 Roommates
+                </span>
+
+            </div>
+
+
+            <!-- Roommate Cards will be displayed here -->
+            <div id="roommate-list" class="roommate-grid">
+
+                <p class="empty-message">
+                    No roommates added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 RoomEase.
+            Shared Living, Made Easier.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
