@@ -19,7 +19,7 @@ const path = require("path");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // Middleware to read JSON data
@@ -840,13 +840,11 @@ app.use((error, req, res, next) => {
    18. START SERVER
 ===================================== */
 
-app.listen(PORT, () => {
-
+app.listen(PORT, "0.0.0.0", () => {
     console.log("----------------------------------");
     console.log("       ROOMEASE SERVER STARTED");
     console.log("----------------------------------");
     console.log(`Website: http://localhost:${PORT}`);
     console.log("Database: roomease.db");
     console.log("----------------------------------");
-
 });
